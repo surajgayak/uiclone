@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Nosifer&family=Poppins:wght@300&family=Roboto:wght@300&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: poppins;
+}
+
+.swiper {
+    width: 96%;
+    height: 100%;
+    /* padding: 20px; */
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-wrapper {
+    gap: 15px;
+    height: 370px;
+}
+section .slider2 .imgs img {
+    width: 500px;
+    height: 280px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+section .slider2 .imgs img:hover {
+    transform: scale(1.02);
+    transition: 0.2s linear;
+}
+.swiper-wrapper {
+    border-radius: 20px;
+}
+.swiper-wrapper img {
+    height: 350px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 15px !important;
+    opacity: 0.7;
+    color: white;
+}
+
+@media (max-width: 760px) {
+    .swiper-button-next {
+        right: 20px;
+        transform: rotate(90deg);
+    }
+
+    .swiper-button-prev {
+        left: 20px;
+        transform: rotate(90deg);
+    }
+}
