@@ -11,7 +11,7 @@ class RegisterController extends Controller
     {
         return view('register');
     }
-    public function store(Request $request)
+    public function registration(Request $request)
     {
         $customer = new Customer;
         $customer->name = $request->name;

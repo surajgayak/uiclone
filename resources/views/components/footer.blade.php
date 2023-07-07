@@ -1,10 +1,10 @@
 <footer aria-label="Site Footer" class="bg-gray-100">
     <div class="border-t">
         <div class="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-            <a href={{ route('welcome') }}>
-                <img class="h-12 w-auto mx-auto object-contain cursor-pointer" src="images/logo.png" alt="logo" />
+            <a>
+                <img src="/images/logo.png" class="h-12 w-32 mx-auto object-contain " alt="logo" />
             </a>
-            <div class="mx-auto mt-6 w-full text-center leading-relaxed text-gray-800">NextStore is the only store of the
+            <div class="mx-auto mt-6 w-full text-center leading-relaxed text-gray-800">NexStore is the only store of the
                 future</div>
             <nav aria-label="Footer Nav" class="mt-12">
                 <ul class="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
@@ -18,16 +18,7 @@
                             class="cursor-pointer font-medium text-gray-800 transition hover:text-gray-800/75 hover:underline">
                             About </a>
                     </li>
-                    <li>
-                        <a
-                            class="cursor-pointer font-medium text-gray-800 transition hover:text-gray-800/75 hover:underline">
-                            Product </a>
-                    </li>
-                    <li>
-                        <a
-                            class="cursor-pointer font-medium text-gray-800 transition hover:text-gray-800/75 hover:underline">
-                            Contact </a>
-                    </li>
+
                     <li>
                         <a
                             class="cursor-pointer font-medium text-gray-800 transition hover:text-gray-800/75 hover:underline">
@@ -38,11 +29,7 @@
                             class="cursor-pointer font-medium text-gray-800 transition hover:text-gray-800/75 hover:underline">
                             Privacy Policy </a>
                     </li>
-                    <li>
-                        <a
-                            class="cursor-pointer font-medium text-gray-800 transition hover:text-gray-800/75 hover:underline">
-                            License </a>
-                    </li>
+
                 </ul>
             </nav>
             <ul class="mt-12 flex items-center justify-center gap-6 md:gap-8">
@@ -66,28 +53,9 @@
                         </svg>
                     </a>
                 </li>
-                <li>
-                    <a target="_blank" class="cursor-pointer text-gray-800 transition hover:text-gray-800/75">
-                        <span class="sr-only">Twitter</span>
-                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path
-                                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
-                            </path>
-                        </svg>
-                    </a>
-                </li>
 
-                <li>
-                    <a class="cursor-pointer text-gray-800 transition hover:text-gray-800/75">
-                        <span class="sr-only">Youtube</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="h-8 w-8"
-                            fill="currentColor" viewBox="0 0 64 64">
-                            <path
-                                d="M 32 15 C 14.938 15 12.659656 15.177734 10.472656 17.427734 C 8.2856563 19.677734 8 23.252 8 32 C 8 40.748 8.2856562 44.323266 10.472656 46.572266 C 12.659656 48.821266 14.938 49 32 49 C 49.062 49 51.340344 48.821266 53.527344 46.572266 C 55.714344 44.322266 56 40.748 56 32 C 56 23.252 55.714344 19.677734 53.527344 17.427734 C 51.340344 15.177734 49.062 15 32 15 z M 32 19 C 45.969 19 49.379156 19.062422 50.535156 20.232422 C 51.691156 21.402422 52 24.538 52 32 C 52 39.462 51.691156 42.597578 50.535156 43.767578 C 49.379156 44.937578 45.969 45 32 45 C 18.031 45 14.620844 44.937578 13.464844 43.767578 C 12.308844 42.597578 12.03125 39.462 12.03125 32 C 12.03125 24.538 12.308844 21.402422 13.464844 20.232422 C 14.620844 19.062422 18.031 19 32 19 z M 27.949219 25.017578 L 27.949219 38.982422 L 40.095703 31.945312 L 27.949219 25.017578 z">
-                            </path>
-                        </svg>
-                    </a>
-                </li>
+
+
             </ul>
             <div class="mx-auto mt-12 w-full text-center leading-relaxed text-gray-800">&copy; 2022 All right reserved
             </div>

@@ -10,4 +10,9 @@ class MyorderController extends Controller
     {
         return view('myorders');
     }
+
+    public function myorders()
+    {
+        return view('myorders');
+    }
 }

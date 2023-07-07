@@ -22,7 +22,6 @@ class LoginController extends Controller
                 break;
             }
         }
-
         if ($matched) {
             return redirect()->route('homepageafterlogin');
         } else {

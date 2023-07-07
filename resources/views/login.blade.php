@@ -21,9 +21,9 @@
     @endif
 
     <h1 class="text-center text-blue-500 text-4xl font-bold pt-16">LOG IN</h1>
-    <div class="bg-white p-8 shadow-lg rounded-md w-1/3 m-auto my-5">
+    <div class="bg-white p-8 rounded shadow-md  sm:w-full md:w-1/3  m-auto">
         <h2 class="text-2xl mb-4 ">Login to your account</h2>
-        <form action="{{ route('login') }}" method="post">
+        <form action="{{ url('/login') }}" method="post">
             @csrf
             <div class="mb-4">
                 <label class="block mb-2 font-bold text-gray-800" for="email">Email</label>
@@ -43,14 +43,13 @@
                     type="submit">Login</button>
             </div>
         </form>
+
         <p class="text-center text-gray-500 pt-3">Forget your password ? <a href="" class="underline">Reset
                 your Password</a>
         </p>
 
-
-
     </div>
-    <h2 class="text-center bold text-gray-500 text-3xl p-5">OR<br><a
+    <h2 class="text-center bold text-gray-500 text-3xl p-5 m-5">OR<br><a
             href="{{ route('register') }}"class="underline">Create a new
             account</a></h2>
 

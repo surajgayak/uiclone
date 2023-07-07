@@ -12,9 +12,9 @@
 <body>
     <x-navbar></x-navbar>
     <h1 class="text-center text-blue-500 text-4xl font-bold pt-5">Create New Account</h1>
-    <div class="bg-white p-8 rounded shadow-md w-5/12 m-auto">
+    <div class="bg-white p-8 rounded shadow-md  sm:w-full md:w-1/3 m-auto">
         <h2 class="text-2xl font-semibold mb-6">Register</h2>
-        <form action="{{ route('register') }}" method="post">
+        <form action="{{ url('/registration') }}" method="post">
             @csrf
             <div class="mb-4">
                 <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
@@ -45,9 +45,9 @@
             <button type="submit" class="bg-blue-500 text-white rounded px-4 py-2 w-full font-bold">Register</button>
         </form>
     </div>
-    <h1 class="text-center bold text-2xl p-5">Already have an account ? then<br><a href="{{ route('login') }} "
-            class="underline">Log
-            in</a></h1>
+    <h1 class="text-center bold text-2xl p-5 m-5 text-gray-400">Already have an account ?<br> Then Log in<br><a
+            href="{{ route('login') }} " class="underline">
+        </a></h1>
 
 
 

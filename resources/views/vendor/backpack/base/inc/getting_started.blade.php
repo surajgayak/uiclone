@@ -13,7 +13,7 @@
 <body>
     <div class="w-full flex flex-wrap justify-start h-auto border border-amber-600">
         <div class="w-25 h-auto m-3 p-8 bg-amber-400 rounded">
-            <h1 class="text-center font-bold text-2xl">Users</h1>
+            <h1 class="text-center font-bold text-2xl">Admin Users</h1>
             <hr><br>
             <p class="text-center  text-2xl"> {{ DB::table('users')->count() }}
             </p>
@@ -26,20 +26,21 @@
         </div>
 
         <div class="w-25 h-auto m-3 p-8 bg-red-400 rounded">
-            <h1 class="text-center font-bold text-2xl">Users</h1>
+            <h1 class="text-center font-bold text-2xl">Uploads</h1>
             <hr><br>
-            <p class="text-center  text-2xl">100</p>
+            <p class="text-center  text-2xl">{{ DB::table('upload')->count() }}</p>
         </div>
 
+
         <div class="w-25 h-auto m-3 p-8 bg-green-400 rounded">
-            <h1 class="text-center font-bold text-2xl">Users</h1>
+            <h1 class="text-center font-bold text-2xl">Category</h1>
             <hr><br>
-            <p class="text-center text-2xl">100</p>
+            <p class="text-center text-2xl">{{ DB::table('categories')->count() }}</p>
         </div>
         <div class="w-25 h-auto m-3 p-8 bg-cyan-400 rounded">
-            <h1 class="text-center font-bold text-2xl">Users</h1>
+            <h1 class="text-center font-bold text-2xl">Product</h1>
             <hr><br>
-            <p class="text-center  text-2xl">100</p>
+            <p class="text-center  text-2xl">{{ DB::table('product')->count() }}</p>
         </div>
 
     </div>

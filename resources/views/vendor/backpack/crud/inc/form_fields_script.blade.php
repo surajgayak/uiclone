@@ -23,7 +23,7 @@
             }
 
             // Validate that the field has been found
-            if(this.$input.length === 0) {
+            if (this.$input.length === 0) {
                 console.error(`CrudField error! Could not select INPUT for "${this.name}"`);
             }
 
@@ -36,8 +36,12 @@
 
         get activeInput() {
             // get the input/textarea/select that has that field name
-            this.$input = $(`input[name="${this.name}"], textarea[name="${this.name}"], select[name="${this.name}"], select[name="${this.name}[]"]`);
-            let possibleInput = this.$input.length === 1 ? this.$input : this.$input.filter(function() { return $(this).closest('[id=inline-create-dialog]').length });
+            this.$input = $(
+                `input[name="${this.name}"], textarea[name="${this.name}"], select[name="${this.name}"], select[name="${this.name}[]"]`
+                );
+            let possibleInput = this.$input.length === 1 ? this.$input : this.$input.filter(function() {
+                return $(this).closest('[id=inline-create-dialog]').length
+            });
             return possibleInput.length === 1 ? possibleInput : this.$input.first();
         }
 
@@ -52,7 +56,9 @@
             // otherwise, try to find the input using other selectors
             if (this.$input.length === 0) {
                 // try searching for the field with the corresponding bp-field-name
-                input = this.wrapper.find(`input[bp-field-name="${this.name}"], textarea[bp-field-name="${this.name}"], select[bp-field-name="${this.name}"], select[bp-field-name="${this.name}[]"]`).first();
+                input = this.wrapper.find(
+                    `input[bp-field-name="${this.name}"], textarea[bp-field-name="${this.name}"], select[bp-field-name="${this.name}"], select[bp-field-name="${this.name}[]"]`
+                    ).first();
 
                 // if not input found yet, just get the first input in that wrapper
                 if (input.length === 0) {
@@ -82,14 +88,17 @@
             const bindedClosure = closure.bind(this);
             const fieldChanged = (event, values) => bindedClosure(this, event, values);
 
-            if(this.isSubfield) {
-                window.crud.subfieldsCallbacks[this.parent.name] ??= [];
-                window.crud.subfieldsCallbacks[this.parent.name].push({ closure, field: this });
+            if (this.isSubfield) {
+                window.crud.subfieldsCallbacks[this.parent.name] ?? = [];
+                window.crud.subfieldsCallbacks[this.parent.name].push({
+                    closure,
+                    field: this
+                });
                 this.wrapper.trigger('CrudField:subfieldCallbacksUpdated');
                 return this;
             }
 
-            if(['INPUT', 'TEXTAREA'].includes(this.input?.nodeName)) {
+            if (['INPUT', 'TEXTAREA'].includes(this.input?.nodeName)) {
                 this.input?.addEventListener('input', fieldChanged, false);
             }
             this.$input.change(fieldChanged);
@@ -98,8 +107,9 @@
         }
 
         change() {
-            if(this.isSubfield) {
-                window.crud.subfieldsCallbacks[this.parent.name]?.forEach(callback => callback.triggerChange = true);
+            if (this.isSubfield) {
+                window.crud.subfieldsCallbacks[this.parent.name]?.forEach(callback => callback.triggerChange =
+                true);
             } else {
                 this.$input.trigger('change');
             }
@@ -150,18 +160,22 @@
             let subfield = new CrudField(this.name);
             subfield.name = name;
 
-            if(!rowNumber) {
+            if (!rowNumber) {
                 subfield.isSubfield = true;
                 subfield.subfieldHolder = this.name; // deprecated
                 subfield.parent = this;
             } else {
                 subfield.rowNumber = rowNumber;
-                subfield.wrapper = $(`[data-repeatable-identifier="${this.name}"][data-row-number="${rowNumber}"]`).find(`[bp-field-wrapper][bp-field-name$="${name}"]`);
-                subfield.$input = subfield.wrapper.find(`[data-repeatable-input-name$="${name}"][bp-field-main-input]`);
+                subfield.wrapper = $(`[data-repeatable-identifier="${this.name}"][data-row-number="${rowNumber}"]`)
+                    .find(`[bp-field-wrapper][bp-field-name$="${name}"]`);
+                subfield.$input = subfield.wrapper.find(
+                    `[data-repeatable-input-name$="${name}"][bp-field-main-input]`);
                 // if no bp-field-main-input has been declared in the field itself,
                 // assume it's the first input in that wrapper, whatever it is
                 if (subfield.$input.length == 0) {
-                    subfield.$input = subfield.wrapper.find(`input[data-repeatable-input-name$="${name}"], textarea[data-repeatable-input-name$="${name}"], select[data-repeatable-input-name$="${name}"]`).first();
+                    subfield.$input = subfield.wrapper.find(
+                        `input[data-repeatable-input-name$="${name}"], textarea[data-repeatable-input-name$="${name}"], select[data-repeatable-input-name$="${name}"]`
+                        ).first();
                 }
 
                 subfield.input = subfield.$input[0];
